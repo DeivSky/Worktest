@@ -1,0 +1,161 @@
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Assertions;
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CircleCollider2D))]
+public class RockController : MonoBehaviour
+{
+    [SerializeField] private RockSettingsReference rockSettings = null;
+
+    public Transform Goal = null;
+    private Vector2 velocity = Vector2.zero;
+    private float fixedDeltaTime = 0f;
+    private bool dying = false;
+    private new Rigidbody2D rigidbody = null;
+    private new SpriteRenderer renderer = null;
+    private new Collider2D collider2D = null;
+    private LevelBounds levelBounds = null;
+
+    private void Awake()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<SpriteRenderer>();
+        collider2D = GetComponent<Collider2D>();
+        fixedDeltaTime = Time.fixedDeltaTime;
+        levelBounds = GameManager.Instance.LevelBounds;
+    }
+
+    private void FixedUpdate()
+    {
+        if (dying) return;
+
+        velocity.y += rockSettings.Value.Gravity * fixedDeltaTime;
+        Move(velocity * fixedDeltaTime);
+    }
+
+    private void Move(Vector2 delta) => rigidbody.MovePosition(rigidbody.position + delta);
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        switch (other.transform.tag)
+        {
+            case "Player":
+                Bounce();
+                break;
+            case "Ground":
+                StartCoroutine(Destroy(2f));
+                break;
+            case "Goal":
+                velocity.x = 0f;
+                if (velocity.y > 0f) velocity.y = 0f; 
+                rigidbody.MovePosition(other.transform.position);
+                StartCoroutine(Scored());
+                break;
+        }
+    }
+
+    public void SetVelocity(float magnitude, float radian) =>
+        velocity = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * magnitude;
+
+    private void Bounce()
+    {
+        if (velocity.y > 0f) return;
+
+        velocity.y = -velocity.y;
+        velocity *= rockSettings.Value.BounceMultiplier;
+
+        if (IsFinalBounce())
+            SetFinalBounceVelocity();
+    }
+
+    private bool IsFinalBounce()
+    {
+        Vector2 position = rigidbody.position;
+        Vector2 goalPosition = Goal.position;
+        float gravity = rockSettings.Value.Gravity;
+        
+        float x = goalPosition.x - position.x;
+        x = x >= 0f ? levelBounds.RightBound : levelBounds.LeftBound;
+        float y = 0f;
+
+        float sqrt = Mathf.Pow(velocity.y, 2) - 2f * gravity * y;
+        if (sqrt < 0f) return true;
+
+        sqrt = Mathf.Sqrt(sqrt);
+        return Mathf.Abs(Mathf.Max((-velocity.y + sqrt) / gravity, (-velocity.y - sqrt) / gravity, 0f) 
+                         * velocity.x + position.x) >= Mathf.Abs(x);
+    }
+
+    private void SetFinalBounceVelocity()
+    {
+        const float deg = 60f;
+        const float rad = deg * Mathf.Deg2Rad;
+        const float radNeg = (180f - deg) * Mathf.Deg2Rad;
+        
+        Vector2 position = rigidbody.position;
+        Vector2 goalPosition = Goal.position;
+        float gravity = rockSettings.Value.Gravity;
+
+        float x = goalPosition.x - position.x;
+        float y = goalPosition.y - position.y;
+        float angle = Mathf.Sign(x) >= 0f ? rad : radNeg;
+
+        float a = gravity / 2f * Mathf.Pow(x, 2) / Mathf.Pow(Mathf.Cos(angle), 2);
+        float b = x * Mathf.Sin(angle) / Mathf.Cos(angle) - y;
+
+        float v = -a / b;
+
+        if (v < 0f) return;
+        SetVelocity(Mathf.Sqrt(v), angle);
+    }
+
+    private IEnumerator Destroy(float duration)
+    {
+        dying = true;
+        velocity.y = 0f;
+        var waitForFixedUpdate = new WaitForFixedUpdate();
+        collider2D.enabled = false;
+
+        float fromX = velocity.x;
+        const float toX = 0f;
+        
+        Color fromColor = renderer.color;
+        Color toColor = fromColor;
+        toColor.a = 0f;
+
+        float angle = 0f;
+        float elapsedTime = 0f;
+        while (duration > elapsedTime)
+        {
+            velocity.x = Mathf.Lerp(fromX, toX, elapsedTime / duration);
+            Move(velocity * fixedDeltaTime);
+
+            angle -= velocity.x;
+            rigidbody.MoveRotation(angle);
+            
+            renderer.color = Color.Lerp(fromColor, toColor, elapsedTime / duration);
+            
+            elapsedTime += fixedDeltaTime;
+            yield return waitForFixedUpdate;
+        }
+
+        Destroy(gameObject);
+    }
+
+    private IEnumerator Scored()
+    {
+        Vector2 localScale = transform.localScale;
+        Vector2 size = renderer.size * localScale;
+        while (size.y > 0f)
+        {
+            size.y += velocity.y * Time.deltaTime;
+            renderer.size = size / localScale;
+            
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
+}
