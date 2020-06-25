@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 116493653}
   - component: {fileID: 116493654}
   m_Layer: 0
-  m_Name: Goal
+  m_Name: goal
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,7 +172,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.2
 --- !u!1 &454216750
 GameObject:
   m_ObjectHideFlags: 3
@@ -370,7 +370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5755248, y: -0.099999905, z: -11}
+  m_LocalPosition: {x: -0.5752654, y: -0.099999905, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 751743154}
   - component: {fileID: 751743153}
   m_Layer: 0
-  m_Name: Tires
+  m_Name: goalTires
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,6 +570,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2571877973084135402}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1406208373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406208374}
+  m_Layer: 0
+  m_Name: rockPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1406208374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406208373}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.12, y: -2.62, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1470670574 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 2571877971635501316, guid: bdf47beb40f0b844a88fef759b081301,
@@ -605,9 +635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a270e84aef124439ef3b15e8668213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSettings: {fileID: 0}
-  rockThrowerSettings: {fileID: 0}
-  rockSettings: {fileID: 0}
+  playerSettings: {fileID: 11400000, guid: dc3b7cd777c3b4346a4390958c8e2888, type: 2}
+  rockThrowerSettings: {fileID: 11400000, guid: 1e1ec877c5b090543a4a8d14995174ca,
+    type: 2}
+  rockSettings: {fileID: 11400000, guid: c4b394e79b8b842468901b46d0b1587a, type: 2}
 --- !u!4 &1818723416
 Transform:
   m_ObjectHideFlags: 0
@@ -629,9 +660,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 841013220, guid: bdf47beb40f0b844a88fef759b081301, type: 3}
+      propertyPath: m_Name
+      value: minBound
+      objectReference: {fileID: 0}
+    - target: {fileID: 841013221, guid: bdf47beb40f0b844a88fef759b081301, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 999396807, guid: bdf47beb40f0b844a88fef759b081301, type: 3}
+      propertyPath: m_Name
+      value: maxBound
+      objectReference: {fileID: 0}
     - target: {fileID: 999396808, guid: bdf47beb40f0b844a88fef759b081301, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 999396808, guid: bdf47beb40f0b844a88fef759b081301, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.67
       objectReference: {fileID: 0}
     - target: {fileID: 2571877971575010273, guid: bdf47beb40f0b844a88fef759b081301,
         type: 3}

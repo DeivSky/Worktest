@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private PlayerSettingsReference playerSettings = null;
+    private PlayerSettingsReference playerSettings = null;
     private LevelBounds levelBounds = null;
     
     private Animator animator = null;
@@ -23,11 +23,10 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        playerSettings = GameManager.Instance.PlayerSettings;
         action = GetComponent<PlayerInput>().actions.FindAction("Movement", true);
         animator = GetComponent<Animator>();
         particleSystem = GetComponent<ParticleSystem>();
-        Transform leftBound = GameObject.Find("leftBound").transform;
-        Transform rightBound = GameObject.Find("rightBound").transform;
         levelBounds = GameManager.Instance.LevelBounds;
     }
 

@@ -2,15 +2,18 @@
 
 public class LevelBounds
 {
-    public float LeftBound => leftBound.position.x;
-    public float RightBound => rightBound.position.x;
+    public Vector2 MaxBound => maxBound.position;
+    public Vector2 MinBound => minBound.position;
 
-    private readonly Transform leftBound;
-    private readonly Transform rightBound;
+    public float LeftBound => minBound.position.x;
+    public float RightBound => maxBound.position.x;
 
-    public LevelBounds(Transform leftBound, Transform rightBound)
+    private readonly Transform minBound;
+    private readonly Transform maxBound;
+
+    public LevelBounds(Transform minBound, Transform maxBound)
     {
-        this.leftBound = leftBound;
-        this.rightBound = rightBound;
+        this.minBound = minBound;
+        this.maxBound = maxBound;
     }
 }

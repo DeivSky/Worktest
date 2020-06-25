@@ -1,53 +1,72 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator))]
 public class RockThrowerController : MonoBehaviour
 {
-    [SerializeField] private RockThrowerSettingsReference rockThrowerSettings = null;
+    private RockThrowerSettingsReference rockThrowerSettings = null;
 
     private Animator animator = null;
-    private Queue<GameObject> rocks = null;
-    private Transform rockSpawn = null;
     private readonly int throwHash = Animator.StringToHash("Throw");
+    private SpawnPool<RockController> spawnPool = null;
     
     private void Awake()
     {
+        rockThrowerSettings = GameManager.Instance.RockThrowerSettings;
         animator = GetComponent<Animator>();
-
-        var settingsValue = rockThrowerSettings.Value;
-        Transform goal = GameObject.Find("Goal").transform;
-        rockSpawn = transform.GetChild(0);
-        float minRad = settingsValue.MinThrowAngle * Mathf.Deg2Rad;
-        float maxRad = settingsValue.MaxThrowAngle * Mathf.Deg2Rad;
-        
-        rocks = new Queue<GameObject>(settingsValue.RockCount);
-        for (int i = 0; i < settingsValue.RockCount; i++)
-        {
-            var rock = Instantiate(settingsValue.RockPrefab, rockSpawn.position, Quaternion.identity);
-            rock.SetActive(false);
-            var rockController = rock.GetComponent<RockController>();
-            rockController.SetVelocity(
-                Random.Range(settingsValue.MinRockVelocity, settingsValue.MaxRockVelocity), 
-                Random.Range(minRad, maxRad));
-            rockController.Goal = goal;
-            rocks.Enqueue(rock);
-        }
+        var settings = rockThrowerSettings.Value;
+        spawnPool = new SpawnPool<RockController>(settings.RockCount, settings.RockPrefab);
     }
 
-    private void Start() => StartCoroutine(Throw(rockThrowerSettings.Value.TimeBetweenThrows));
-    
-    private IEnumerator Throw(float timeBetween)
+    private IEnumerator Start()
     {
-        var waitForAnimation = new WaitForSeconds(timeBetween);
-        int count = rocks.Count;
+        Transform rockSpawn = transform.GetChild(0);
+        Transform pool = GameObject.Find("rockPool").transform;
+        var settings = rockThrowerSettings.Value;
+        float minRad = settings.MinThrowAngle * Mathf.Deg2Rad;
+        float maxRad = settings.MaxThrowAngle * Mathf.Deg2Rad;
+
+        yield return StartCoroutine(spawnPool.InstantiateAllCoroutine(5,
+            rock =>
+            {
+                rock.GetComponent<RockController>().SetVelocity(
+                    Random.Range(settings.MinRockVelocity, settings.MaxRockVelocity),
+                    Random.Range(minRad, maxRad));
+                var transform = rock.transform;
+                transform.parent = pool;
+                transform.position = rockSpawn.position;
+            }));
+        
+        StartCoroutine(Throw(settings.RockCount, settings.TimeBetweenThrows));
+    }
+
+    private void FixedUpdate()
+    {
+        var rocks = spawnPool.ActiveComponents;
+        float minHeight = float.MaxValue;
+        for (int i = 0; i < rocks.Length; i++)
+        {
+            var rock = rocks[i];
+        }
+
+
+    }
+
+    private IEnumerator Throw(int count, float timeBetween)
+    {
+        Assert.IsTrue(timeBetween > 0f);
+        
+        var wait = new WaitForSeconds(timeBetween);
         for (int i = 0; i < count; i++)
         {
-            yield return waitForAnimation;
+            yield return wait;
             animator.SetTrigger(throwHash);
         }
     }
-    
-    private void DoThrow() => rocks.Dequeue().SetActive(true);
+
+    private void DoThrow() => spawnPool.Spawn();
 }

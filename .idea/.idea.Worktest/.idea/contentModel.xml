@@ -19,6 +19,7 @@
           <e p="RockThrowerController.cs" t="Include" />
           <e p="RockThrowerSettings.cs" t="Include" />
           <e p="RockThrowerSettingsReference.cs" t="Include" />
+          <e p="SpawnPool.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

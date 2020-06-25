@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 public class RockController : MonoBehaviour
 {
-    [SerializeField] private RockSettingsReference rockSettings = null;
+    public Vector2 Velocity => velocity;
 
-    public Transform Goal = null;
+    private RockSettingsReference rockSettings = null;
+    private Transform goal = null;
     private Vector2 velocity = Vector2.zero;
     private float fixedDeltaTime = 0f;
     private bool dying = false;
@@ -20,11 +20,18 @@ public class RockController : MonoBehaviour
 
     private void Awake()
     {
+        goal = GameManager.Instance.Goal;
+        rockSettings = GameManager.Instance.RockSettings;
         rigidbody = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
         collider2D = GetComponent<Collider2D>();
         fixedDeltaTime = Time.fixedDeltaTime;
         levelBounds = GameManager.Instance.LevelBounds;
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void FixedUpdate()
@@ -33,6 +40,7 @@ public class RockController : MonoBehaviour
 
         velocity.y += rockSettings.Value.Gravity * fixedDeltaTime;
         Move(velocity * fixedDeltaTime);
+        if (rigidbody.position.y <= levelBounds.MinBound.y) StartCoroutine(Destroy(2f));
     }
 
     private void Move(Vector2 delta) => rigidbody.MovePosition(rigidbody.position + delta);
@@ -43,9 +51,6 @@ public class RockController : MonoBehaviour
         {
             case "Player":
                 Bounce();
-                break;
-            case "Ground":
-                StartCoroutine(Destroy(2f));
                 break;
             case "Goal":
                 velocity.x = 0f;
@@ -73,7 +78,7 @@ public class RockController : MonoBehaviour
     private bool IsFinalBounce()
     {
         Vector2 position = rigidbody.position;
-        Vector2 goalPosition = Goal.position;
+        Vector2 goalPosition = goal.position;
         float gravity = rockSettings.Value.Gravity;
         
         float x = goalPosition.x - position.x;
@@ -91,16 +96,16 @@ public class RockController : MonoBehaviour
     private void SetFinalBounceVelocity()
     {
         const float deg = 60f;
-        const float rad = deg * Mathf.Deg2Rad;
-        const float radNeg = (180f - deg) * Mathf.Deg2Rad;
+        const float radRight = deg * Mathf.Deg2Rad;
+        const float radLeft = (180f - deg) * Mathf.Deg2Rad;
         
         Vector2 position = rigidbody.position;
-        Vector2 goalPosition = Goal.position;
+        Vector2 goalPosition = goal.position;
         float gravity = rockSettings.Value.Gravity;
 
         float x = goalPosition.x - position.x;
         float y = goalPosition.y - position.y;
-        float angle = Mathf.Sign(x) >= 0f ? rad : radNeg;
+        float angle = Mathf.Sign(x) >= 0f ? radRight : radLeft;
 
         float a = gravity / 2f * Mathf.Pow(x, 2) / Mathf.Pow(Mathf.Cos(angle), 2);
         float b = x * Mathf.Sin(angle) / Mathf.Cos(angle) - y;
@@ -146,14 +151,15 @@ public class RockController : MonoBehaviour
 
     private IEnumerator Scored()
     {
+        var wait = new WaitForFixedUpdate();
         Vector2 localScale = transform.localScale;
         Vector2 size = renderer.size * localScale;
         while (size.y > 0f)
         {
-            size.y += velocity.y * Time.deltaTime;
+            size.y += velocity.y * fixedDeltaTime;
             renderer.size = size / localScale;
             
-            yield return null;
+            yield return wait;
         }
 
         Destroy(gameObject);
