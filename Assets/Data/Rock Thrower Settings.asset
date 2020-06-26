@@ -15,9 +15,9 @@ MonoBehaviour:
   Value:
     TimeBetweenThrows: 3
     RockCount: 40
-    MinRockVelocity: 10
-    MaxRockVelocity: 14
-    MinThrowAngle: 30
-    MaxThrowAngle: 75
+    MinRockVelocity: 8
+    MaxRockVelocity: 12
+    MinThrowAngle: 35
+    MaxThrowAngle: 70
     RockPrefab: {fileID: 5430197353921920898, guid: 5380890110d0b0a4db3d3d6b698d3756,
       type: 3}

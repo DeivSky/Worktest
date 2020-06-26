@@ -2,11 +2,8 @@
 
 public class LevelBounds
 {
-    public Vector2 MaxBound => maxBound.position;
-    public Vector2 MinBound => minBound.position;
-
-    public float LeftBound => minBound.position.x;
-    public float RightBound => maxBound.position.x;
+    public Vector2 Max => maxBound.position;
+    public Vector2 Min => minBound.position;
 
     private readonly Transform minBound;
     private readonly Transform maxBound;

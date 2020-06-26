@@ -6,16 +6,18 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class RockController : MonoBehaviour
 {
-    public Vector2 Velocity => velocity;
-
+    public float RemainingFlightTime { get; private set; } = 0f;
+    public Vector2 EstimatedLandingLocation { get; private set; } = Vector2.zero;
+    public bool IsLastBounce => EstimatedLandingLocation.x >= levelBounds.Max.x || RemainingFlightTime < 0f;
+    
     private RockSettingsReference rockSettings = null;
     private Transform goal = null;
     private Vector2 velocity = Vector2.zero;
     private float fixedDeltaTime = 0f;
     private bool dying = false;
-    private new Rigidbody2D rigidbody = null;
-    private new SpriteRenderer renderer = null;
-    private new Collider2D collider2D = null;
+    private Rigidbody2D rigidbody = null;
+    private SpriteRenderer renderer = null;
+    private Collider2D collider2D = null;
     private LevelBounds levelBounds = null;
 
     private void Awake()
@@ -29,18 +31,17 @@ public class RockController : MonoBehaviour
         levelBounds = GameManager.Instance.LevelBounds;
     }
 
-    private void Start()
-    {
-        
-    }
+    private void Start() => Compute();
 
     private void FixedUpdate()
     {
         if (dying) return;
 
+        RemainingFlightTime -= fixedDeltaTime;
         velocity.y += rockSettings.Value.Gravity * fixedDeltaTime;
         Move(velocity * fixedDeltaTime);
-        if (rigidbody.position.y <= levelBounds.MinBound.y) StartCoroutine(Destroy(2f));
+        if (rigidbody.position.y <= levelBounds.Min.y) 
+            StartCoroutine(Destroy(2f));
     }
 
     private void Move(Vector2 delta) => rigidbody.MovePosition(rigidbody.position + delta);
@@ -71,26 +72,31 @@ public class RockController : MonoBehaviour
         velocity.y = -velocity.y;
         velocity *= rockSettings.Value.BounceMultiplier;
 
-        if (IsFinalBounce())
+        Compute();
+        
+        if (IsLastBounce)
             SetFinalBounceVelocity();
     }
 
-    private bool IsFinalBounce()
+    private void Compute()
     {
-        Vector2 position = rigidbody.position;
-        Vector2 goalPosition = goal.position;
         float gravity = rockSettings.Value.Gravity;
-        
-        float x = goalPosition.x - position.x;
-        x = x >= 0f ? levelBounds.RightBound : levelBounds.LeftBound;
-        float y = 0f;
-
-        float sqrt = Mathf.Pow(velocity.y, 2) - 2f * gravity * y;
-        if (sqrt < 0f) return true;
+        Vector2 position = rigidbody.position;
+        float deltaY = levelBounds.Min.y - position.y;
+        float sqrt = Mathf.Pow(velocity.y, 2) + 2f * gravity * deltaY;
+        if (sqrt < 0f)
+        {
+            RemainingFlightTime = -1f;
+            return;
+        }
 
         sqrt = Mathf.Sqrt(sqrt);
-        return Mathf.Abs(Mathf.Max((-velocity.y + sqrt) / gravity, (-velocity.y - sqrt) / gravity, 0f) 
-                         * velocity.x + position.x) >= Mathf.Abs(x);
+        float time = Mathf.Max((-velocity.y + sqrt) / gravity,
+            (-velocity.y - sqrt) / gravity);
+        
+        RemainingFlightTime = time;
+        float deltaX = velocity.x * time;
+        EstimatedLandingLocation = new Vector2(position.x + deltaX, levelBounds.Min.y);
     }
 
     private void SetFinalBounceVelocity()
