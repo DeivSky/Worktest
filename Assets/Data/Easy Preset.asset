@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f125da53fac4788afc20c67a3745479, type: 3}
+  m_Name: Easy Preset
+  m_EditorClassIdentifier: 
+  GameLength: 30
+  PlayerSettings: {fileID: 11400000, guid: dc3b7cd777c3b4346a4390958c8e2888, type: 2}
+  RockSettings: {fileID: 11400000, guid: 1e1ec877c5b090543a4a8d14995174ca, type: 2}
+  CoinSettings: {fileID: 11400000, guid: 9f44e684f7b33314bbcf3f57b67c82c1, type: 2}

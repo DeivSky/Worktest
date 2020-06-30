@@ -20,40 +20,190 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14a188b0-313f-4341-b259-b795b7f2a5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Estimated Landing Point.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Estimated Landing Point.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerGuide.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerGuide.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/goalTires.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/goalTires.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profiler/142825062020.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy Preset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy Preset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Coin Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Coin Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Player Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Player Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Rock Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Easy/Rock Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard Preset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard Preset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Coin Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Coin Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Player Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Player Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Rock Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Data/Hard/Rock Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CM vcam1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CM vcam1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CoinSpawner.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/CoinSpawner.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainScreen.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainScreen.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettingsReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettingsReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettingsReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettingsReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReferenceAsset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReferenceAsset.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelBounds.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelBounds.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SpawnPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SpawnPool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Rock Thrower Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Rock Thrower Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Lanzador_Throw.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Lanzador_Throw.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Player Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Rock Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Rock Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Rock Thrower Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Rock Thrower Settings.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInput.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hero.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataReferenceAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DataReferenceAsset.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RockController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSettingsReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSettingsReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockSettingsReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockSettingsReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettingsReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettingsReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/GuiaUbicacion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/GuiaUbicacion.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Moneda.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Moneda.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,33 +219,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Data/Rock Settings.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/5c/bc0e7ad4/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/509B38DE-0BB8-4FDE-A4B2-340764259EC3/d4/c66398ec/ParticleSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSettingsReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/20/d91e5468/Math.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockThrowerSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockSettingsReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataReferenceAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockThrowerSettingsReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Editor/AssetEditor/NameAndParameterListView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RockController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/b8/00985ef5/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42FCC02F-EDE7-44D6-A4C9-920C103DDAD8/fb/fef4fb2a/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInput.inputactions" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/0e/73fc46f1/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/13/274b523f/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/581C017B-D0EA-43F9-BB08-2B3F4C940D2A/2c/bc125023/EditorElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/5c/bc0e7ad4/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/581C017B-D0EA-43F9-BB08-2B3F4C940D2A/c2/c1d9622a/InspectorElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/509B38DE-0BB8-4FDE-A4B2-340764259EC3/d4/c66398ec/ParticleSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Editor/AssetEditor/NameAndParameterListView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettingsReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/b8/00985ef5/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B80225B3-57C6-4115-895F-5655E67DB547/a2/ab7c02cd/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/581C017B-D0EA-43F9-BB08-2B3F4C940D2A/2c/bc125023/EditorElement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -103,24 +249,42 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Reference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RockSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSettingsReference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettingsReference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RockSettingsReference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/GameObjectUtils.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/OnDestroyEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IKeyable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelBounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Vector2Reference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataReferenceAsset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinsSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FloatReference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpawnPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RockSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RockThrowerSettingsReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerSettingsReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerGuideController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSettingsReference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RockController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinSpawnerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DataReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RockSettingsReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerSettingsReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" />
       </list>
     </option>
   </component>
@@ -150,10 +314,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="868">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="868" />
       <method v="2" />
     </configuration>
   </component>
@@ -174,6 +338,9 @@
       <workItem from="1593191401494" duration="295000" />
       <workItem from="1593199470546" duration="12321000" />
       <workItem from="1593212928498" duration="91000" />
+      <workItem from="1593291414747" duration="6151000" />
+      <workItem from="1593378744237" duration="20007000" />
+      <workItem from="1593433985823" duration="38722000" />
     </task>
     <task id="LOCAL-00001" summary="- Now using GameManager.&#10;- Created SpawnPool class for easier pool handling in RockThrowerController.&#10;- LevelBounds now uses lowerLeft and upperRight, instead of just left and right.&#10;- Now lower bound sets the position of the ground, instead of using collision.">
       <created>1593060740952</created>
@@ -214,74 +381,74 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593115234217" />
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1593212832029">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832029" />
-    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1593212832029">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832029" />
-    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1593212832029">
+    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832029" />
-    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1593212832029">
+    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832029" />
-    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1593212832030">
+    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832030" />
-    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1593212832030">
+    <state width="1877" height="240" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.1.center" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832030" />
-    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1593212832030">
+    <state width="1877" height="240" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.1.left" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832030" />
-    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1593212832030">
+    <state width="1877" height="240" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.1.right" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832030" />
-    <state width="1877" height="240" key="GridCell.Tab.2.bottom" timestamp="1593212832031">
+    <state width="1877" height="240" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.2.bottom" timestamp="1593480271194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832031" />
-    <state width="1877" height="240" key="GridCell.Tab.2.center" timestamp="1593212832031">
+    <state width="1877" height="240" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271194" />
+    <state width="1877" height="240" key="GridCell.Tab.2.center" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832031" />
-    <state width="1877" height="240" key="GridCell.Tab.2.left" timestamp="1593212832030">
+    <state width="1877" height="240" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.2.left" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832030" />
-    <state width="1877" height="240" key="GridCell.Tab.2.right" timestamp="1593212832031">
+    <state width="1877" height="240" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.2.right" timestamp="1593480271193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832031" />
-    <state width="1877" height="240" key="GridCell.Tab.3.bottom" timestamp="1593212832033">
+    <state width="1877" height="240" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271193" />
+    <state width="1877" height="240" key="GridCell.Tab.3.bottom" timestamp="1593480271194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832033" />
-    <state width="1877" height="240" key="GridCell.Tab.3.center" timestamp="1593212832032">
+    <state width="1877" height="240" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271194" />
+    <state width="1877" height="240" key="GridCell.Tab.3.center" timestamp="1593480271194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832032" />
-    <state width="1877" height="240" key="GridCell.Tab.3.left" timestamp="1593212832032">
+    <state width="1877" height="240" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271194" />
+    <state width="1877" height="240" key="GridCell.Tab.3.left" timestamp="1593480271194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832032" />
-    <state width="1877" height="240" key="GridCell.Tab.3.right" timestamp="1593212832032">
+    <state width="1877" height="240" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271194" />
+    <state width="1877" height="240" key="GridCell.Tab.3.right" timestamp="1593480271194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593212832032" />
-    <state x="832" y="219" key="RiderGenerateDialog" timestamp="1593101697801">
+    <state width="1877" height="240" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593480271194" />
+    <state x="832" y="219" key="RiderGenerateDialog" timestamp="1593469819834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="219" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593101697801" />
+    <state x="832" y="219" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593469819834" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1593199599525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -298,10 +465,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593060883157" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593113654962">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593473405465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593113654962" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593473405465" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

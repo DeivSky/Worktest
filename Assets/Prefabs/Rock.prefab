@@ -133,4 +133,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockSettings: {fileID: 11400000, guid: c4b394e79b8b842468901b46d0b1587a, type: 2}
-  Goal: {fileID: 0}

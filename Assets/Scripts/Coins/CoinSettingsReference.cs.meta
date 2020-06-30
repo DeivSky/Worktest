@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 725c49d4de854468afad521323143d8b
+labels:
+- Coin
+- ScriptObject
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

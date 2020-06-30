@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2805429095311402652}
   m_Layer: 0
   m_Name: Spring box
-  m_TagString: Player
+  m_TagString: PlayerBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 4147033119224443615}
   - component: {fileID: 4147033119224443612}
   - component: {fileID: 50108930}
+  - component: {fileID: 6167499085434607136}
   - component: {fileID: 50108929}
   - component: {fileID: 50108932}
   - component: {fileID: 50108935}
@@ -4941,6 +4942,22 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!70 &6167499085434607136
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147033119224443613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.13}
+  m_Size: {x: 0.17, y: 0.26}
+  m_Direction: 0
 --- !u!199 &50108929
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5047,3 +5064,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022c3edf73dc4ea4595ce86fb88c7538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSettings: {fileID: 11400000, guid: dc3b7cd777c3b4346a4390958c8e2888, type: 2}
