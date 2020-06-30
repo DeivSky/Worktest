@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 #if UNITY_EDITOR
@@ -24,21 +25,52 @@ public class LevelPreset : ScriptableObject
 
     private readonly FieldInfo coinSettingsField = typeof(CoinSpawnerController).GetField("coinSettings",
         BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-    
-    public void ApplySettingsToScene()
+
+    public void ApplySettingsToScene(Scene scene)
     {
-        Scene scene = SceneManager.GetActiveScene();
-        var objs = scene.GetRootGameObjects();
-        for (int i = 0; i < objs.Length; i++)
+        var objects = scene.GetRootGameObjects();
+        for (int i = 0; i < objects.Length; i++)
         {
-            if (objs[i].TryGetComponent(out GameManager gameManager))
+            if (objects[i].TryGetComponent(out GameManager gameManager))
+            {
+#if UNITY_EDITOR
+                Undo.RecordObject(gameManager, $"Applied level preset: {gameManager.name}");
+#endif
                 gameLengthField.SetValue(gameManager, GameLength);
-            else if (objs[i].TryGetComponent(out PlayerController playerController))
+#if UNITY_EDITOR
+                PrefabUtility.RecordPrefabInstancePropertyModifications(gameManager);
+#endif
+            }
+            else if (objects[i].TryGetComponent(out PlayerController playerController))
+            {
+#if UNITY_EDITOR
+                Undo.RecordObject(playerController, $"Applied level preset: {playerController.name}");
+#endif
                 playerSettingsField.SetValue(playerController, PlayerSettings);
-            else if (objs[i].TryGetComponent(out RockThrowerController rockThrowerController))
+#if UNITY_EDITOR
+                PrefabUtility.RecordPrefabInstancePropertyModifications(playerController);
+#endif
+            }
+            else if (objects[i].TryGetComponent(out RockThrowerController rockThrowerController))
+            {
+#if UNITY_EDITOR
+                Undo.RecordObject(rockThrowerController, $"Applied level preset: {rockThrowerController.name}");
+#endif
                 rockSettingsField.SetValue(rockThrowerController, RockSettings);
-            else if (objs[i].TryGetComponent(out CoinSpawnerController coinSpawnerController))
+#if UNITY_EDITOR
+                PrefabUtility.RecordPrefabInstancePropertyModifications(rockThrowerController);
+#endif
+            }
+            else if (objects[i].TryGetComponent(out CoinSpawnerController coinSpawnerController))
+            {
+#if UNITY_EDITOR
+                Undo.RecordObject(coinSpawnerController, $"Applied level preset: {coinSpawnerController.name}");
+#endif
                 coinSettingsField.SetValue(coinSpawnerController, CoinSettings);
+#if UNITY_EDITOR
+                PrefabUtility.RecordPrefabInstancePropertyModifications(coinSpawnerController);
+#endif
+            }
         }
     }
 }
@@ -72,9 +104,10 @@ public class LevelPresetEditor : Editor
             prop.CoinSettings, 
             typeof(CoinSettingsReference), 
             false);
-        
-        if (GUILayout.Button("Aplicar"))
-            prop.ApplySettingsToScene();
+
+        if (!GUILayout.Button("Aplicar")) return;
+        var scene = SceneManager.GetActiveScene();
+        prop.ApplySettingsToScene(scene);
     }
 }
 #endif

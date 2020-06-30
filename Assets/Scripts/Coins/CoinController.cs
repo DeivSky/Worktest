@@ -70,6 +70,7 @@ public class CoinController : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
+        renderer.color = transparent;
         float elapsedTime = 0f;
         while (elapsedTime < AnimationDuration)
         {

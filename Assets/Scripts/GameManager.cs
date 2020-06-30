@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -32,7 +33,12 @@ public class GameManager : MonoBehaviour
         GameTime.Value = gameLength;
     }
 
-    private void Update() => GameTime.Value -= Time.deltaTime;
+    private void Update()
+    {
+        GameTime.Value -= Time.deltaTime;
+        if (GameTime.Value <= 0f)
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
 }
 
 #if UNITY_EDITOR

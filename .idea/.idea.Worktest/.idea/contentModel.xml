@@ -6,6 +6,16 @@
     <e p="E:\Game Development\PurpleTree\Worktest" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Samples" t="Include">
+          <e p="Input System" t="Include">
+            <e p="1.0.0" t="Include">
+              <e p="Input Recorder" t="Include">
+                <e p="InputRecorder.cs" t="Include" />
+                <e p="InputRecorderInspector.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Coins" t="Include">
             <e p="CoinController.cs" t="Include" />
@@ -14,6 +24,7 @@
             <e p="CoinSpawnerController.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="MainMenuController.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerGuideController.cs" t="Include" />
@@ -67,6 +78,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.InputSystem.Recorder.csproj" t="IncludeRecursive" />
       <e p="Worktest.sln" t="IncludeFlat" />
     </e>
   </component>

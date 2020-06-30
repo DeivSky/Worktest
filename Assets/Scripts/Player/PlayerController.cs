@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
         var gm = GameManager.Instance;
         // playerSettings = gm.PlayerSettings;
         levelBounds = gm.LevelBounds;
+        var playerInput = GetComponent<PlayerInput>();
 #if UNITY_ANDROID && !UNITY_EDITOR
-        touchAction = GetComponent<PlayerInput>().actions.FindAction("Touch", true);
+        touchAction = playerInput.actions.FindAction("Touch", true);
 #endif
-        moveAction = GetComponent<PlayerInput>().actions.FindAction("Movement", true);
+        moveAction = playerInput.actions.FindAction("Movement", true);
         animator = GetComponent<Animator>();
         renderer = GetComponent<SpriteRenderer>();
         particleSystem = GetComponent<ParticleSystem>();
