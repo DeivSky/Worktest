@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Controlador de instanciación de monedas.
+/// </summary>
 public class CoinSpawnerController : MonoBehaviour
 {
     [SerializeField] private CoinSettingsReference coinSettings = null;
@@ -12,7 +15,7 @@ public class CoinSpawnerController : MonoBehaviour
     private Transform player = null;
 
     private int lastValue = 0;
-    
+
     private void Awake()
     {
         var gm = GameManager.Instance;
@@ -20,7 +23,7 @@ public class CoinSpawnerController : MonoBehaviour
         coins = gm.Coins;
         levelBounds = gm.LevelBounds;
         player = gm.Player.transform;
-        
+
         spawnPool = new SpawnPool(2, coinSettings.Value.CoinPrefab);
         spawnPool.EnqueueAll();
         var queue = spawnPool.QueuedObjects;

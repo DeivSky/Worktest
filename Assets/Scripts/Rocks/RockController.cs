@@ -2,6 +2,13 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Controlador de roca.
+/// Simula el movimiento físico de la roca y calcula el tiempo restante de vuelo <see cref="RemainingFlightTime"/>,
+/// la posición estimada de aterrizaje <see cref="EstimatedLandingLocation"/>, y si el último rebote hace que la roca
+/// se pase de la meta <see cref="IsLastBounce"/>, determina la velocidad necesaria para caer directamente en la misma.
+/// Además dispara un evento cuando alcanza la meta. 
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 public class RockController : MonoBehaviour
@@ -35,6 +42,9 @@ public class RockController : MonoBehaviour
 
     private void Start() => Compute();
 
+    /// <summary>
+    /// Se mueve la roca y, si cae al piso, inicia la corrutina <see cref="Destroy"/>
+    /// </summary>
     private void FixedUpdate()
     {
         if (disableUpdate) return;
@@ -42,15 +52,17 @@ public class RockController : MonoBehaviour
         RemainingFlightTime -= fixedDeltaTime;
         velocity.y += Gravity * fixedDeltaTime;
         Move(velocity * fixedDeltaTime);
-        if (rigidbody.position.y <= levelBounds.Min.y) 
+        if (rigidbody.position.y <= levelBounds.Min.y)
             StartCoroutine(Destroy(2f));
     }
 
-    private void Move(Vector2 delta) => rigidbody.MovePosition(rigidbody.position + delta);
-
+    /// <summary>
+    /// Rebota y/o suma un punto dependiendo de contra qué colisione
+    /// </summary>
+    /// <param name="other"></param>
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("PlayerBox"))
+        if (other.gameObject.CompareTag("PlayerBox"))
             Bounce();
         else if (other.gameObject.CompareTag("Goal"))
         {
@@ -62,9 +74,23 @@ public class RockController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Desplaza al rigidbody en base a <paramref name="delta"/>.
+    /// </summary>
+    /// <param name="delta"></param>
+    private void Move(Vector2 delta) => rigidbody.MovePosition(rigidbody.position + delta);
+
+    /// <summary>
+    /// Se fija el vector velocidad <see cref="velocity"/> a partir del ángulo <paramref name="radian"/> y la magnitud <paramref name="magnitude"/>
+    /// </summary>
+    /// <param name="magnitude"></param>
+    /// <param name="radian"></param>
     public void SetVelocity(float magnitude, float radian) =>
         velocity = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * magnitude;
 
+    /// <summary>
+    /// Rebota, recalcula y, si es el último rebote <see cref="IsLastBounce+"/>, determina la velocidad para embocar.
+    /// </summary>
     private void Bounce()
     {
         if (velocity.y > 0f) return;
@@ -73,17 +99,19 @@ public class RockController : MonoBehaviour
         velocity *= BounceMultiplier;
 
         Compute();
-        
+
         if (IsLastBounce)
             SetFinalBounceVelocity();
     }
 
+    /// <summary>
+    /// Se calcula el tiempo de vuelo y la posición de aterrizaje.
+    /// </summary>
     private void Compute()
     {
-        float gravity = Gravity;
         Vector2 position = rigidbody.position;
         float deltaY = levelBounds.Min.y - position.y;
-        float sqrt = Mathf.Pow(velocity.y, 2) + 2f * gravity * deltaY;
+        float sqrt = Mathf.Pow(velocity.y, 2) + 2f * Gravity * deltaY;
         if (sqrt < 0f)
         {
             RemainingFlightTime = -1f;
@@ -91,30 +119,31 @@ public class RockController : MonoBehaviour
         }
 
         sqrt = Mathf.Sqrt(sqrt);
-        float time = Mathf.Max((-velocity.y + sqrt) / gravity,
-            (-velocity.y - sqrt) / gravity);
-        
+        float time = Mathf.Max((-velocity.y + sqrt) / Gravity,
+            (-velocity.y - sqrt) / Gravity);
+
         RemainingFlightTime = time;
         float deltaX = velocity.x * time;
         EstimatedLandingLocation = new Vector2(position.x + deltaX, levelBounds.Min.y);
     }
 
+    /// <summary>
+    /// Se determina y se fija la velocidad tal que la roca emboque en la meta.
+    /// </summary>
     private void SetFinalBounceVelocity()
     {
         const float deg = 60f;
         const float radRight = deg * Mathf.Deg2Rad;
         const float radLeft = (180f - deg) * Mathf.Deg2Rad;
-        
+
         Vector2 position = rigidbody.position;
         Vector2 goalPosition = goal.position;
-        float gravity = Gravity;
+        Vector2 delta = goalPosition - position;
 
-        float x = goalPosition.x - position.x;
-        float y = goalPosition.y - position.y;
-        float angle = Mathf.Sign(x) >= 0f ? radRight : radLeft;
+        float angle = Mathf.Sign(delta.x) >= 0f ? radRight : radLeft;
 
-        float a = -gravity / 2f * Mathf.Pow(x, 2) / Mathf.Pow(Mathf.Cos(angle), 2);
-        float b = x * Mathf.Sin(angle) / Mathf.Cos(angle) - y;
+        float a = -Gravity / 2f * Mathf.Pow(delta.x, 2) / Mathf.Pow(Mathf.Cos(angle), 2);
+        float b = delta.x * Mathf.Sin(angle) / Mathf.Cos(angle) - delta.y;
 
         float v = a / b;
 
@@ -122,6 +151,12 @@ public class RockController : MonoBehaviour
         SetVelocity(Mathf.Sqrt(v), angle);
     }
 
+    /// <summary>
+    /// Corrutina llamada cuando la roca cae al piso.
+    /// Antes de destruir el objeto, se anima la roca desapareciendo.
+    /// </summary>
+    /// <param name="duration"></param>
+    /// <returns></returns>
     private IEnumerator Destroy(float duration)
     {
         disableUpdate = true;
@@ -131,7 +166,7 @@ public class RockController : MonoBehaviour
 
         float fromX = velocity.x;
         const float toX = 0f;
-        
+
         Color fromColor = renderer.color;
         Color toColor = fromColor;
         toColor.a = 0f;
@@ -145,9 +180,9 @@ public class RockController : MonoBehaviour
 
             angle -= velocity.x;
             rigidbody.MoveRotation(angle);
-            
+
             renderer.color = Color.Lerp(fromColor, toColor, elapsedTime / duration);
-            
+
             elapsedTime += fixedDeltaTime;
             yield return waitForFixedUpdate;
         }
@@ -155,6 +190,10 @@ public class RockController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Al llamar al evento de anotar <see cref="Score"/> y destruir el objeto, se simula que la roca entra en la meta.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Score()
     {
         var wait = new WaitForFixedUpdate();
@@ -164,10 +203,10 @@ public class RockController : MonoBehaviour
         {
             size.y += velocity.y * fixedDeltaTime;
             renderer.size = size / localScale;
-            
+
             yield return wait;
         }
-        
+
         Scored?.Invoke();
         Destroy(gameObject);
     }

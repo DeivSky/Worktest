@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase para manejo de Queues de GameObjects.
+/// </summary>
 public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
 {
     public int TotalDequeued { get; private set; } = 0;
@@ -39,7 +42,7 @@ public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
         for (int i = 0; i < keys.Length; i++)
             gameObjects[i] = dictionary[keys[i]];
     }
-    
+
     public int GetQueuedKeys(int[] keys)
     {
         var queue = queueKeys.ToArray();
@@ -65,11 +68,11 @@ public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
 
         return i;
     }
-    
+
+    protected readonly Dictionary<int, GameObject> dictionary = null;
     protected readonly Queue<int> queueKeys = null;
     protected readonly List<int> activeKeys = null;
     protected readonly List<int> inactiveKeys = null;
-    protected readonly Dictionary<int, GameObject> dictionary = null;
     protected int current = 0;
 
     public SpawnPool(int capacity, GameObject prefab)
@@ -85,6 +88,11 @@ public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
     public IEnumerator EnqueueAllCoroutine(int batchSize, YieldInstruction wait = null)
     {
         int count = Capacity - current;
+
+        if (count <= 0) yield break;
+        if (batchSize <= 0) batchSize = 1;
+        if (batchSize > count) batchSize = count;
+
         int rounds = Mathf.CeilToInt((float) count / batchSize);
         int mod = count % batchSize;
         for (int i = 1; i <= rounds; i++)
@@ -94,7 +102,7 @@ public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
             yield return wait;
         }
     }
-    
+
     public void EnqueueAll()
     {
         int count = Capacity - current;
@@ -127,7 +135,7 @@ public class SpawnPool : IEnumerable<KeyValuePair<int, GameObject>>
         activeKeys.Add(i);
         return go;
     }
-    
+
     protected void TrackInactiveAndDestroyed()
     {
         for (int i = 0; i < activeKeys.Count; i++)

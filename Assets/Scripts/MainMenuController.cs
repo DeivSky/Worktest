@@ -1,13 +1,24 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controlador del menú principal. Controla las acciones del menú y el movimiento del fondo.
+/// </summary>
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] private LevelDifficulty gamePreset = null;
+    [SerializeField] private TextMeshProUGUI difficultyText = null;
     [SerializeField] private SpriteRenderer backgroundRenderer = null;
-    private Transform background = null;
     [SerializeField] private float backgroundSpeed = 2f;
+    private Transform background = null;
+    private bool isHard = true;
 
-    private void Awake() => background = backgroundRenderer.transform;
+    private void Awake()
+    {
+        background = backgroundRenderer.transform;
+        difficultyText.text = gamePreset.DifficultyMode.ToString();
+    }
 
     private void Update()
     {
@@ -18,9 +29,17 @@ public class MainMenuController : MonoBehaviour
 
     public void Play() => SceneManager.LoadScene(1, LoadSceneMode.Single);
 
+    public void ToggleDifficulty()
+    {
+        isHard = !isHard;
+        gamePreset.DifficultyMode = isHard ? LevelDifficulty.Mode.Hard : LevelDifficulty.Mode.Easy;
+        difficultyText.text = gamePreset.DifficultyMode.ToString();
+    }
+
+    public void Exit() =>
 #if !UNITY_EDITOR
-    public void Exit() => Application.Quit();
+        Application.Quit();
 #else
-    public void Exit() => UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #endif
 }

@@ -42,7 +42,9 @@
             <e p="DataReference.cs" t="Include" />
             <e p="DataReferenceAsset.cs" t="Include" />
             <e p="LevelBounds.cs" t="Include" />
+            <e p="LevelDifficulty.cs" t="Include" />
             <e p="LevelPreset.cs" t="Include" />
+            <e p="MinMax.cs" t="Include" />
             <e p="SpawnPool.cs" t="Include" />
           </e>
         </e>

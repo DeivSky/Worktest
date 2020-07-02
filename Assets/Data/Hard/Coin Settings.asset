@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Coin Settings
   m_EditorClassIdentifier: 
   Value:
-    ScoreToSpawn: 5
+    ScoreToSpawn: 4
     Lifetime: 2
+    AnimationDuration: 0.5
     CoinPrefab: {fileID: 8997790231453411136, guid: 7129e4dd76b9940489d5f62ee993c18e,
       type: 3}

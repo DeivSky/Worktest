@@ -4,8 +4,8 @@ using UnityEngine;
 [Serializable]
 public struct CoinSettings
 {
-    public int ScoreToSpawn;
-    public float Lifetime;
-    public float AnimationDuration;
+    [Range(1, 20)] public int ScoreToSpawn;
+    [Range(0.5f, 20f)] public float Lifetime;
+    [Range(0f, 5f)] public float AnimationDuration;
     public GameObject CoinPrefab;
 }

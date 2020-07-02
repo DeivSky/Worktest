@@ -2,6 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Controlador de las monedas.
+/// Controla el ciclo de vida y animación de la moneda, y dispara un evento cuando es agarrada. 
+/// </summary>
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class CoinController : MonoBehaviour
@@ -38,7 +42,7 @@ public class CoinController : MonoBehaviour
     private void Update()
     {
         if (!(lifetime > 0f)) return;
-        
+
         lifetime -= Time.deltaTime;
         if (lifetime <= 0f)
             StartCoroutine(Disable(StartCoroutine(FadeOut())));
@@ -49,8 +53,7 @@ public class CoinController : MonoBehaviour
         if (!other.gameObject.CompareTag("Player")) return;
 
         collider2D.enabled = false;
-        StartCoroutine(GrabbedAnimation());
-        StartCoroutine(Disable(StartCoroutine(FadeOut())));
+        StartCoroutine(Disable(StartCoroutine(GrabbedAnimation())));
     }
 
     private IEnumerator GrabbedAnimation()
@@ -64,7 +67,7 @@ public class CoinController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             transform.position = Vector2.Lerp(from, to, elapsedTime / AnimationDuration);
         }
-        
+
         CoinGrabbed?.Invoke();
     }
 
@@ -81,7 +84,7 @@ public class CoinController : MonoBehaviour
 
         renderer.color = color;
     }
-    
+
     private IEnumerator FadeOut()
     {
         float elapsedTime = 0f;

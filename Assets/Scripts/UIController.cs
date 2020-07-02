@@ -1,12 +1,14 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
+/// <summary>
+/// Controlador de la interfaz del nivel.
+/// Controla el texto de la cantidad de rocas <see cref="scoreText"/>, cantidad de monedas <see cref="coinsText"/>, y tiempo restante <see cref="timeText"/>.
+/// También sale de la partida al cancelar
+/// </summary>
 public class UIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText = null;
@@ -32,6 +34,5 @@ public class UIController : MonoBehaviour
         coinsText.text = coins.Value.ToString();
         int minutes = Math.DivRem(Mathf.FloorToInt(time.Value), 60, out int seconds);
         timeText.text = new TimeSpan(0, minutes, seconds).ToString();
-
     }
 }

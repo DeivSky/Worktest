@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Clase para definir sencillamente los límites del juego a partir de dos Transforms
+/// </summary>
 public class LevelBounds
 {
     public Vector2 Max => maxBound.position;
