@@ -12,20 +12,16 @@ public class PlayerGuideController : MonoBehaviour
 
     private DataReference<Vector2> rockLandingPoint = null;
     private Transform player = null;
-    private Vector2 offset = Vector2.zero;
     private Vector2 lastValue = Vector2.zero;
     private Coroutine coroutine = null;
+    private float y = 0;
 
     private void Awake()
     {
         player = GameManager.Instance.Player.transform;
-        var box = player.GetChild(0);
-        var collider = box.GetComponent<BoxCollider2D>();
-        float x = collider.bounds.size.x * box.localScale.x * player.localScale.x;
-        var renderer = GetComponent<SpriteRenderer>();
-        float y = renderer.sprite.bounds.extents.y * transform.localScale.y;
-        offset = new Vector2(x, y);
         rockLandingPoint = GameManager.Instance.RockThrower.GetComponent<RockThrowerController>().NextRockLandingPoint;
+        var renderer = GetComponent<SpriteRenderer>();
+        y = player.position.y - renderer.sprite.bounds.extents.y * transform.localScale.y;
     }
 
     private void Start() => coroutine = StartCoroutine(FollowPlayer());
@@ -34,8 +30,8 @@ public class PlayerGuideController : MonoBehaviour
     {
         Vector2 value = rockLandingPoint.Value;
         if (value == lastValue) return;
-
         lastValue = value;
+        
         if (value == Vector2.zero)
         {
             if (coroutine != null)
@@ -45,7 +41,7 @@ public class PlayerGuideController : MonoBehaviour
         }
 
         Vector2 from = transform.position;
-        Vector2 to = value - offset;
+        Vector2 to = new Vector2(value.x, y);
 
         if (coroutine != null)
             StopCoroutine(coroutine);
@@ -72,23 +68,20 @@ public class PlayerGuideController : MonoBehaviour
         while (Mathf.Abs(player.position.x - transform.position.x) > Vector2.kEpsilon && elapsedTime < duration)
         {
             Vector2 from = transform.position;
-            Vector2 to = player.position;
-            to.y -= offset.y;
+            Vector2 to = new Vector2(player.position.x, y);
             while (elapsedTime < duration)
             {
                 transform.position = Vector2.Lerp(from, to, elapsedTime / duration);
                 elapsedTime += Time.deltaTime;
                 yield return null;
 
-                if (to != (Vector2) player.position) break;
+                if (to.x != player.position.x) break;
             }
         }
 
         while (true)
         {
-            Vector2 position = player.position;
-            position.y -= offset.y;
-            transform.position = position;
+            transform.position = new Vector2(player.position.x, y);
             yield return null;
         }
     }

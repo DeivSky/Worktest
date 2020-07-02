@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Value:
     RockCount: 20
-    MinTimeBetweenThrows: 4
-    MaxTimeBetweenThrows: 8
-    MinRockVelocity: 10
-    MaxRockVelocity: 15
-    MinThrowAngle: 40
-    MaxThrowAngle: 70
+    TimeBetweenThrows:
+      Min: 4
+      Max: 6
+    RockVelocity:
+      Min: 8
+      Max: 10
+    ThrowAngle:
+      Min: 45
+      Max: 75
     Gravity: -9.81
     BounceMultiplier: {x: 1, y: 1.2}
     RockPrefab: {fileID: 5430197353921920898, guid: 5380890110d0b0a4db3d3d6b698d3756,

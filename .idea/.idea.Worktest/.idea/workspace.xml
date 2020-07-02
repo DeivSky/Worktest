@@ -20,56 +20,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14a188b0-313f-4341-b259-b795b7f2a5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Level Difficulty.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Data/Level Difficulty.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelDifficulty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelDifficulty.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MinMax.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/MinMax.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Worktest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Hard/Coin Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Hard/Coin Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Easy/Rock Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Easy/Rock Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Hard/Player Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Hard/Player Settings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Hard/Rock Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Hard/Rock Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettingsReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettingsReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettingsReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSettingsReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReferenceAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/DataReferenceAsset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelBounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelBounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/SpawnPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SpawnPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/UnityCrashHandler64.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/UnityCrashHandler64.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/UnityPlayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/UnityPlayer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/WinPixEventRuntime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Cinemachine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Cinemachine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.InputSystem.Recorder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.InputSystem.Recorder.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.InputSystem.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.InputSystem.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/Unity.Timeline.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.TextCoreModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.TextCoreModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/Managed/UnityEngine.UIElementsModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/boot.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/globalgamemanagers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/globalgamemanagers.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/level0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/level1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/resources.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets0.assets.resS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets1.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Builds/PC/Worktest_Data/sharedassets1.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +149,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPresetWrapper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelPreset.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Coins/CoinController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/LevelBounds.cs" />
@@ -185,11 +163,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Coins/CoinSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettingsReference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/SpawnPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/MinMax.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockThrowerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuideController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Rocks/RockController.cs" />
       </list>
     </option>
   </component>
@@ -250,6 +230,7 @@
       <workItem from="1593522898337" duration="16767000" />
       <workItem from="1593607739936" duration="34004000" />
       <workItem from="1593716973287" duration="5358000" />
+      <workItem from="1593723904112" duration="3526000" />
     </task>
     <task id="LOCAL-00001" summary="- Now using GameManager.&#10;- Created SpawnPool class for easier pool handling in RockThrowerController.&#10;- LevelBounds now uses lowerLeft and upperRight, instead of just left and right.&#10;- Now lower bound sets the position of the ground, instead of using collision.">
       <created>1593060740952</created>

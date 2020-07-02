@@ -78,6 +78,7 @@ public class RockThrowerController : MonoBehaviour
         }
 
         float minRemainingFlightTime = float.MaxValue;
+        Vector2 velocity = Vector2.zero;
         Vector2 point = Vector2.zero;
         for (int i = 0; i < count; i++)
         {

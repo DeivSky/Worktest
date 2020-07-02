@@ -29,6 +29,8 @@ public class RockController : MonoBehaviour
     private new Collider2D collider2D = null;
     private LevelBounds levelBounds = null;
 
+    private float playerHeight = 0f;
+    
     private void Awake()
     {
         var gm = GameManager.Instance;
@@ -38,6 +40,12 @@ public class RockController : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         collider2D = GetComponent<Collider2D>();
         fixedDeltaTime = Time.fixedDeltaTime;
+
+        var player = gm.Player.transform;
+        var box = player.GetChild(0);
+        var bounds = box.GetComponent<Collider2D>().bounds;
+        Vector2 scale = (Vector2)box.localScale * player.localScale;
+        playerHeight = bounds.center.y + bounds.extents.y * scale.y;
     }
 
     private void Start() => Compute();
@@ -110,7 +118,7 @@ public class RockController : MonoBehaviour
     private void Compute()
     {
         Vector2 position = rigidbody.position;
-        float deltaY = levelBounds.Min.y - position.y;
+        float deltaY = playerHeight - position.y;
         float sqrt = Mathf.Pow(velocity.y, 2) + 2f * Gravity * deltaY;
         if (sqrt < 0f)
         {
@@ -124,7 +132,7 @@ public class RockController : MonoBehaviour
 
         RemainingFlightTime = time;
         float deltaX = velocity.x * time;
-        EstimatedLandingLocation = new Vector2(position.x + deltaX, levelBounds.Min.y);
+        EstimatedLandingLocation = new Vector2(position.x + deltaX, playerHeight);
     }
 
     /// <summary>

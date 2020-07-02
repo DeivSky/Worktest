@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player Settings
   m_EditorClassIdentifier: 
   Value:
-    Speed: 8
+    Speed: 12
     InertiaDuration: 0.3

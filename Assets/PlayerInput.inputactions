@@ -59,7 +59,7 @@
                 {
                     "name": "",
                     "id": "58058299-1d1c-48c4-b41f-60fc4201fa36",
-                    "path": "<Touchscreen>/touch*/position/x",
+                    "path": "<Touchscreen>/primaryTouch/position/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

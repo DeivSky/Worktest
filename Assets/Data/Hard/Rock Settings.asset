@@ -22,8 +22,8 @@ MonoBehaviour:
       Max: 12
     ThrowAngle:
       Min: 40
-      Max: 70
+      Max: 80
     Gravity: -15
-    BounceMultiplier: {x: 0.8, y: 0.8}
+    BounceMultiplier: {x: 0.9, y: 0.8}
     RockPrefab: {fileID: 5430197353921920898, guid: 5380890110d0b0a4db3d3d6b698d3756,
       type: 3}
